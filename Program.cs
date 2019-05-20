@@ -26,7 +26,16 @@ namespace MasterMind
             for (int i = 1; i <= attempts; i++) {
                 Console.WriteLine("Attempt " + i);
                 Console.Write("Enter Input :");
-                string input = Console.ReadLine();
+                string input = string.Empty;
+                do
+                {
+                    input = Console.ReadLine();
+                    if (input.Length != 4)
+                    {
+                        Console.WriteLine("Invalid number..enter again");
+                        Console.Write("Enter Input :");
+                    }
+                } while (input.Length != 4);
 
                 var result = CompareNumber(input, randomArray);
 
