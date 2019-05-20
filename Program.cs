@@ -30,12 +30,12 @@ namespace MasterMind
                 do
                 {
                     input = Console.ReadLine();
-                    if (input.Length != 4)
+                    if (input.Length != maxDigits)
                     {
                         Console.WriteLine("Invalid number..enter again");
                         Console.Write("Enter Input :");
                     }
-                } while (input.Length != 4);
+                } while (input.Length != maxDigits);
 
                 var result = CompareNumber(input, randomArray);
 
